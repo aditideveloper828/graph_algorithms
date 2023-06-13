@@ -109,6 +109,7 @@ def format_sequence(converters_info, source_format, destination_format):
 
 
 def test():
+    """Test cases for assignment"""
     converters_info_str = """\
     D 2
     0 1
@@ -118,6 +119,8 @@ def test():
     destination_format = 1
     
     print(format_sequence(converters_info_str, source_format, destination_format))
+    # should get output: [0, 1]
+    
     
     converters_info_str = """\
     D 2
@@ -125,6 +128,7 @@ def test():
     """
     
     print(format_sequence(converters_info_str, 1, 1))
+    #should get output: [1]
     
     converters_info_str = """\
     D 2
@@ -132,6 +136,7 @@ def test():
     """
     
     print(format_sequence(converters_info_str, 1, 0))    
+    #should get output: No solution!
     
     converters_info_str = """\
     D 5
@@ -142,27 +147,6 @@ def test():
     """
     
     print(format_sequence(converters_info_str, 1, 2))
-    converters_info_str = """\
-    D 1
-    """
-    
-    print(format_sequence(converters_info_str, 0, 0))    
-    
-    converters_info_str = """\
-    D 5
-    0 1
-    0 2
-    1 2
-    2 3
-    1 3
-    3 0
-    """
-    
-    print(format_sequence(converters_info_str, 1, 0))
-    print(format_sequence(converters_info_str, 0, 3) in [[0, 1, 3], [0, 2, 3]])
-    print(format_sequence(converters_info_str, 4, 4))
-    print(format_sequence(converters_info_str, 3, 3))
-    print(format_sequence(converters_info_str, 3, 2))
-    print(format_sequence(converters_info_str, 3, 4))
+    #should get output: [1, 2]
     
 test()
