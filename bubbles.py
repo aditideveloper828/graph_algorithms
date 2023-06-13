@@ -80,7 +80,6 @@ def make_list(data, adj_list):
 
 
 def bubbles(physical_contact_info):
-    #Connected components)
     """takes physical contact information
     about a group of people and determines the bubbles.
     Does this by calling helper functions"""
@@ -89,3 +88,34 @@ def bubbles(physical_contact_info):
     return connections(adj_list)
 
 
+def test():
+    """Test cases for assignment"""
+    physical_contact_info = """\
+    U 2
+    0 1
+    """
+
+    print(sorted(sorted(bubble) for bubble in bubbles(physical_contact_info)))
+    #should get output: [[0, 1]]
+    
+    physical_contact_info = """\
+    U 7
+    1 2
+    1 5
+    1 6
+    2 3
+    2 5
+    3 4
+    4 5
+    """
+
+    print(sorted(sorted(bubble) for bubble in bubbles(physical_contact_info)))
+    #should get output: [[0], [1, 2, 3, 4, 5, 6]]
+
+    
+test()
+
+    
+    
+    
+    
