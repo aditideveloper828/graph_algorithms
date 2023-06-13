@@ -78,12 +78,15 @@ def build_order(dependencies):
 
 
 def test():
+    """Tests cases for assignment"""
     dependencies = """\
     D 2
     0 1
     """
     
     print(build_order(dependencies))
+    #should get output: [0, 1]
+    
     dependencies = """\
     D 3
     1 2
@@ -91,6 +94,7 @@ def test():
     """
     
     print(build_order(dependencies) in [[0, 1, 2], [1, 0, 2]])    
+    #should get output: True
     
     dependencies = """\
     D 3
@@ -101,5 +105,6 @@ def test():
         print("Wrong answer!")
     else:
         print(sorted(solution))
+    #should get output: [0, 1, 2]
         
 test()
