@@ -109,5 +109,10 @@ def test():
     print(min_capacity(city_map, 2))
     print(min_capacity(city_map, 3))    
     
+    """should get output:
+    16
+    0
+    16
+    8"""
     
 test()
