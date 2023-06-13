@@ -97,6 +97,7 @@ def min_capacity(city_map, depot_position):
 
 
 def test():
+    """Test cases for assignment"""
     city_map = """\
     U 4 W
     0 2 5
