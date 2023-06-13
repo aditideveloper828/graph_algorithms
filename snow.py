@@ -103,6 +103,7 @@ def which_segments(city_map):
     return segments
 
 def test():
+    """Test cases for assignment"""
     city_map = """\
     U 3 W
     0 1 1
@@ -111,24 +112,13 @@ def test():
     """
 
     print(sorted(which_segments(city_map)))
+    #should get output: [(0, 1), (1, 2)]
 
     city_map = """\
     U 1 W
     """
 
     print(sorted(which_segments(city_map)))
-
-
-    city_map = """\
-    U 4 W
-    0 1 5
-    1 3 5
-    3 2 3
-    2 0 5
-    0 3 2
-    1 2 1
-    """
-
-    print(sorted(which_segments(city_map)))
+    #should get output: []
 
 test()
